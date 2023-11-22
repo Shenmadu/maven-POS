@@ -8,61 +8,116 @@
 <?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="545.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
-   <children>
-      <JFXComboBox layoutX="60.0" layoutY="49.0" prefHeight="25.0" prefWidth="123.0" />
-      <Label layoutX="60.0" layoutY="28.0" text="Customer ID" />
-      <JFXComboBox layoutX="38.0" layoutY="118.0" prefHeight="25.0" prefWidth="123.0" />
-      <Label layoutX="38.0" layoutY="94.0" text="Item Code" />
-      <Label layoutX="201.0" layoutY="28.0" prefHeight="17.0" prefWidth="44.0" text="Name" />
-      <JFXTextField layoutX="201.0" layoutY="49.0" prefHeight="25.0" prefWidth="250.0" />
-      <Label layoutX="185.0" layoutY="94.0" text="Description" />
-      <JFXTextField layoutX="185.0" layoutY="118.0" prefHeight="25.0" prefWidth="161.0" />
-      <Label layoutX="363.0" layoutY="94.0" text="Unit Price" />
-      <JFXTextField layoutX="363.0" layoutY="118.0" prefHeight="25.0" prefWidth="146.0" />
-      <Label layoutX="533.0" layoutY="94.0" text="Buying QTY" />
-      <JFXTextField layoutX="533.0" layoutY="118.0" prefHeight="25.0" prefWidth="161.0" />
-      <JFXButton layoutX="614.0" layoutY="164.0" style="-fx-background-color: #aec747;" text="Add to Cart" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </JFXButton>
-      <JFXTreeTableView layoutX="44.0" layoutY="207.0" prefHeight="248.0" prefWidth="655.0">
-         <columns>
-            <TreeTableColumn prefWidth="120.0" text="Code" />
-            <TreeTableColumn prefWidth="165.0" text="Description" />
-            <TreeTableColumn prefWidth="129.0" text="Unit Price" />
-            <TreeTableColumn prefWidth="111.0" text="QTY" />
-            <TreeTableColumn prefWidth="129.0" text="Option" />
-         </columns>
-      </JFXTreeTableView>
-      <JFXButton layoutX="614.0" layoutY="473.0" prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: #eb4c80;" text="Place Order" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </JFXButton>
-      <Label layoutX="43.0" layoutY="479.0" prefHeight="17.0" prefWidth="51.0" text="Total:">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Label>
-      <Label layoutX="100.0" layoutY="479.0" prefHeight="26.0" prefWidth="89.0" text="0.00">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Label>
-      <JFXButton fx:id="goBackButton" contentDisplay="GRAPHIC_ONLY" layoutY="8.0" onAction="#goBackButtonOnAction" prefHeight="35.0" prefWidth="51.0" text="Go Back">
-         <graphic>
-            <ImageView fitHeight="39.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/back.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-   </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="586.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="35.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="392.0" minHeight="10.0" prefHeight="238.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXComboBox prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Customer ID" GridPane.columnIndex="1" />
+                  <Label text="Item Code" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <JFXComboBox prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label prefHeight="17.0" prefWidth="44.0" text="Name" GridPane.columnIndex="3" />
+                  <JFXTextField prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <JFXTextField prefHeight="25.0" prefWidth="250.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label text="Description" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label text="Unit Price" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <JFXTextField prefHeight="25.0" prefWidth="146.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Label text="Buying QTY" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                  <JFXTextField prefHeight="25.0" prefWidth="161.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                  <JFXButton style="-fx-background-color: #aec747;" text="Add to Cart" textFill="WHITE" GridPane.columnIndex="7" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </GridPane>
+            <JFXButton prefHeight="38.0" prefWidth="97.0" style="-fx-background-color: #eb4c80;" text="Place Order" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0" minWidth="10.0" prefWidth="112.0" />
+               </columnConstraints>
+               <children>
+                  <Label prefHeight="26.0" prefWidth="89.0" text="0.00" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="51.0" text="Total :" GridPane.halignment="LEFT">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <JFXButton fx:id="goBackButton" contentDisplay="GRAPHIC_ONLY" onAction="#goBackButtonOnAction" prefHeight="35.0" prefWidth="51.0" text="Go Back">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXTreeTableView GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <columns>
+                  <TreeTableColumn maxWidth="1.7976931348623157E308" prefWidth="82.0" text="Code" />
+                  <TreeTableColumn maxWidth="1.7976931348623157E308" prefWidth="165.0" text="Description" />
+                  <TreeTableColumn maxWidth="1.7976931348623157E308" prefWidth="120.0" text="Unit Price" />
+                  <TreeTableColumn maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="90.0" text="QTY" />
+                  <TreeTableColumn maxWidth="136.0" prefWidth="136.0" text="Option" />
+               </columns>
+            </JFXTreeTableView>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
