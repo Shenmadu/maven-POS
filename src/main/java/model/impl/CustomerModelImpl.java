@@ -1,15 +1,12 @@
 package model.impl;
 
-import com.jfoenix.controls.JFXButton;
+
 import db.DBConnection;
 import dto.CustomerDto;
-import dto.tm.CustomerTm;
 import model.CustomerModel;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 

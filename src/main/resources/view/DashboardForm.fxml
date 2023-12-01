@@ -31,7 +31,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="41.0" layoutY="276.0" prefHeight="46.0" prefWidth="119.0" ripplerFill="#60e45e" style="-fx-background-color: #21d87d;" text="Orders" textFill="WHITE">
+      <JFXButton layoutX="41.0" layoutY="276.0" onAction="#ordersButtonOnAction" prefHeight="46.0" prefWidth="119.0" ripplerFill="#60e45e" style="-fx-background-color: #21d87d;" text="Orders" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

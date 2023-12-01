@@ -6,6 +6,8 @@ import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import db.DBConnection;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -29,6 +31,7 @@ import java.sql.*;
 import java.io.IOException;
 import java.sql.Statement;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class CustomerFormController {
 
@@ -88,6 +91,18 @@ public class CustomerFormController {
             setData(newValue);
 
         } );
+
+        txtSearch.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String newValue) {
+                tblCustomer.setPredicate(new Predicate<TreeItem<CustomerTm>>() {
+                    @Override
+                    public boolean test(TreeItem<CustomerTm> treeItem) {
+                        return treeItem.getValue().getId().contains(newValue)|| treeItem.getValue().getName().contains(newValue);
+                    }
+                });
+            }
+        });
 
     }
 
